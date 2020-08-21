@@ -9,8 +9,7 @@ public class CustomerWriter implements ItemWriter<Customer>{
 	@Autowired
     private CustomerRepository customerRepository;
 
-	@Override
-    public void write(List<? extends Customer> customers) throws Exception {
+	public void write(List<? extends Customer> customers) throws Exception {
         customerRepository.saveAll(customers);
     }
 }

@@ -26,13 +26,13 @@ public class JobConfiguration {
     @Bean
     public StaxEventItemReader<Customer> customerItemReader(){
 
-    	Map<String, Class> aliases = new HashMap<>();
+    	Map<String, Class> aliases = new HashMap<String, Class>();
         aliases.put("customer", Customer.class);
         CustomerConverter converter = new CustomerConverter();
         XStreamMarshaller ummarshaller = new XStreamMarshaller();
         ummarshaller.setAliases(aliases);
         ummarshaller.setConverters(converter);
-        StaxEventItemReader<Customer> reader = new StaxEventItemReader<>();
+        StaxEventItemReader<Customer> reader = new StaxEventItemReader<Customer>();
         reader.setResource(new ClassPathResource("Customer.xml"));
         reader.setFragmentRootElementName("customer");
         reader.setUnmarshaller(ummarshaller);
