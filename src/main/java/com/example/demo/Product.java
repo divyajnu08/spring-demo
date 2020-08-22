@@ -4,6 +4,7 @@ public class Product {
 	
 	private String type;
 	private int discount;
+	private String message;
 
 	public String getType() {
 		return type;
@@ -19,6 +20,14 @@ public class Product {
 
 	public void setDiscount(int discount) {
 		this.discount = discount;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 

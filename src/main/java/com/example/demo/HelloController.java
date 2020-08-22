@@ -40,7 +40,7 @@ public class HelloController {
 
 	   
 	   @RequestMapping(value = "/getDiscount", method = RequestMethod.GET, produces = "application/json")
-		public Product getQuestions(@RequestParam(required = true) String type) {
+		public Product getQuestions(@RequestParam(required = true) String type) throws InstantiationException, IllegalAccessException {
 
 			Product product = new Product();
 			product.setType(type);
